@@ -1,6 +1,4 @@
 #include <iostream> // Biblioteca para E/S estándar
-#include <vector>
-#include <algorithm>
 
 const int MAXTALLA = 20; // Define macrollamada con valor de 20  
 
@@ -17,7 +15,6 @@ public:
     void imprimir() const;
 };
 
-// Las funciones constructora y destructora garantizan la inicialización y eliminación de la memoria dinámica
 
 Vector::Vector(int n=MAXTALLA){ // Constructor 
     
