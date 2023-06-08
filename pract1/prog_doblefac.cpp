@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include "misfunciones.hpp"
 
 int main(){
     
@@ -14,13 +14,13 @@ int main(){
         factorial = 1;
     }
     
-    else if (num % 2 == 0){
+    else if (misf::EsPar(num)){
     
         for (int i = 2; i <= num; i+=2){
             factorial *= i;
         }
     }
-    else if (num % 2 != 0){
+    else if (!misf::EsPar(num)){
        
         for (int i = 1; i <= num; i+=2){
             factorial *= i;}
