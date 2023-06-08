@@ -18,3 +18,20 @@ bool misf::EsPrimo(int num){
     }
     return true;
 }
+
+int misf::ContarDivisores(int num){
+    
+    int divisores = 0;
+    
+    if (num == 1){
+        divisores = 1;
+    }
+    else{
+        for (int i = 1; i <= num; i++){
+            if (num % i == 0){
+                divisores++;
+            }
+        }
+    }
+    return divisores;
+}
