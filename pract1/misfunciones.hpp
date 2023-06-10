@@ -5,7 +5,8 @@ namespace misf {
 
     bool EsPar(int n);
     bool EsPrimo(int numero);
-    int ContarDivisores(int num);
+    int ContarDivisores(int numero);
+
 }
 
 #endif

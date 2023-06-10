@@ -4,7 +4,7 @@
 int main(){
     
     int num;
-    primorial = 1;
+    int primorial = 1;
     
     std::cout<<"Introduce un número entero :  "; std::cin >> num;
     
