@@ -38,28 +38,25 @@ int misf::ContarDivisores(int num){
 }
 
 
-int misf::ContarOlasCalor(std::vector<double>& v, int dias, double temp){
+int misf::ContarOlasCalor(const std::vector<double>& v, int dias, double t) {
     
-    int dias_cons = 0;
-    int olas_de_calor = 0;
+    int dias_cons = 0, olas_calor = 0;
     
-    
-    for (int i = 0; i <= v.size(); i++){
+    for (int i = 0; i <= v.size(); i++) {
         
-        if (v[i] > temp){
+        if (v[i] > t) {
             dias_cons++;
-            if (dias_cons > dias){
-               olas_de_calor++;
-            }
-        }
-        else{
-            dias_cons = 0;
+            
+            if (dias_cons == (dias + 1)){
+                olas_calor++;}
+            
+            if (v[i + 1] <= t){
+                dias_cons = 0;}
         }
     }
-    return olas_de_calor;
+    return olas_calor;
 }
-        
-    
+
     
     
     
