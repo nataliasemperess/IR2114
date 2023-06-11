@@ -1,6 +1,7 @@
 #include <iostream>
 #include "misfunciones.hpp"
 #include <vector>
+#include <string>
 
 bool misf::EsPar(int n){
     return (n % 2 == 0);
@@ -57,6 +58,33 @@ int misf::ContarOlasCalor(const std::vector<double>& v, int dias, double t) {
     return olas_calor;
 }
 
+
+std::string misf::ObtenerPalabra(const std::string& s, int numero){
     
+    int contador = 0;
     
+    std::string palab = "", final = "";
+    std::vector<std::string> palabras;
     
+    for (int i = 0; i <= s.size(); i++){
+        if (s[i] != ' '){
+            palab += s[i];
+            
+            if (i == s.size()-1){
+                palabras.push_back(palab);
+            }
+        }
+        else{
+            if (i != 0 && s[i -1] != ' '){
+                palabras.push_back(palab);
+                palab = "";
+            }
+        }
+    }
+    
+    if (palabras.size() > 0 && numero > 0 && numero <= palabras.size()){
+        final = palabras[numero-1];
+    }
+    return final;
+}
+ 
