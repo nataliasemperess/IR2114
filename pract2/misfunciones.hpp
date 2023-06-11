@@ -12,6 +12,8 @@ namespace misf {
     int ContarOlasCalor(const std::vector<double>& v, int dias, double temp);
     std::string ObtenerPalabra(const std::string& s, int numero);
     std::string ConstruirLista(const std::vector<int>& v);
+    int OrdenarBurbuja(std::vector<int>& v);
+
 
 }
 
