@@ -4,11 +4,13 @@
 int main(){
     
     int num;
-    int primorial = 1;
+
+    long primorial = 1;
     
     std::cout<<"Introduce un número entero :  "; std::cin >> num;
-    
-    for (int i = 0; i <= num; i++){
+
+
+    for (int i = 1; i <= num; i++){
         if (misf::EsPrimo(i)){
             primorial *= i;
         }
@@ -19,4 +21,3 @@ int main(){
     
     
 }
-//
