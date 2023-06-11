@@ -88,3 +88,39 @@ std::string misf::ObtenerPalabra(const std::string& s, int numero){
     return final;
 }
  
+ 
+std::string misf::ConstruirLista(const std::vector<int>& v){
+    
+    std::string final = "", letra = "";
+    
+    if (v.size() > 0){
+        final = std::to_string(v[0]);
+        
+        for(int i = 1; i < v.size(); i++){
+            letra = std::to_string(v[i]);
+            
+            if (i == v.size() - 1){
+                final = final + " y " + letra;
+            }
+            else{
+                final = final + ", " + letra;
+            }
+        }
+    }
+    return final;
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
